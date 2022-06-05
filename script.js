@@ -8,7 +8,7 @@ function askPasswordLength(){
   console.log(passwordLength);
 
   // Nan
-  const passwordLengthIsNan = isNan(passwordLength);
+  const passwordLengthIsNan = isNaN(passwordLength);
 
   //0
   const userDidntEnterAnything = passwordLength === 0;
@@ -16,7 +16,7 @@ function askPasswordLength(){
   // < 8 or > 128
   const passwordLengthIsOutOfRange = passwordLength < 8 || passwordLength > 128 
 
-  if(passwordLengthIsNan || userDidntEnterAnything || passwordLengthIsOutOfRange){
+  if(passwordLengthIsNaN || userDidntEnterAnything || passwordLengthIsOutOfRange){
     return askPasswordLength();
   }
 
