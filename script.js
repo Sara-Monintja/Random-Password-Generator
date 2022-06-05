@@ -8,7 +8,7 @@ function askPasswordLength(){
   console.log(passwordLength);
 
   // Nan
-  const passwordLengthIsNan = isNaN(passwordLength);
+  const passwordLengthIsNaN = isNaN(passwordLength);
 
   //0
   const userDidntEnterAnything = passwordLength === 0;
@@ -56,7 +56,7 @@ generateButton.addEventListener('click', function(event){
 
     // = characterSet + ----- there are more than 1 criteria, otherwise it will overwrite
   if (criteria.lowercaseWanted){
-    characterSet = characterSet + "abcdefghijklmnopqrstuvwxyz)";
+    characterSet = characterSet + "abcdefghijklmnopqrstuvwxyz";
   }
 
   if (criteria.uppercaseWanted) {
@@ -67,7 +67,7 @@ generateButton.addEventListener('click', function(event){
     characterSet = characterSet + "!@#$%^"
   }  
   
-  if (criteria.symbolWanted) {
+  if (criteria.numberWanted) {
     characterSet = characterSet + "0123456789";
     // can also be written as characterSet += characterSet
   }
